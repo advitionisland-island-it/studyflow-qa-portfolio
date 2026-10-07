@@ -11,7 +11,7 @@ Login, dashboard, quiz, resume, score, error handling, data persistence, duplica
 
 ## Exit criteria
 - 8 API/SQLite tests pass.
-- 6 browser E2E tests pass.
+- 6 browser UI tests with a deterministic mock API pass.
 - No secret material is committed.
 - CI runs on push and pull request.
 - BUG-002 remains covered by regression automation.
