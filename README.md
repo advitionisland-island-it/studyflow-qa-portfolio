@@ -1,25 +1,20 @@
-# StudyFlow QA Portfolio
-
-> Independent QA portfolio project. Commercial QA experience: **None**.
+# StudyFlow QA Lab
 
 [![QA Tests](https://github.com/advitionisland-island-it/studyflow-qa-portfolio/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/advitionisland-island-it/studyflow-qa-portfolio/actions/workflows/playwright.yml)
 
 ## 日本語で読む
 
-StudyFlowは、2問のクイズの回答・進捗・点数を保存する学習アプリを題材にした、個人のQAポートフォリオです。API・SQLiteの8件と、モックAPIを使うブラウザーUIの6件を自動テストし、GitHub Actionsで結果を公開しています。
+StudyFlowは、2問のクイズの回答・進捗・点数を保存する学習Webアプリです。API・SQLiteの8件と、モックAPIを使うブラウザーUIの6件を自動テストし、GitHub Actionsで結果を公開しています。
 
-[日本語説明ガイド](UNDERSTANDING_GUIDE_JA.md)では、アプリの仕組み、14件のテスト、二重送信の防止策、実際に失敗から修正まで確認したSQLite接続の問題、検証の限界、面談用の説明例を紹介しています。
+[日本語説明ガイド](UNDERSTANDING_GUIDE_JA.md)では、アプリの仕組み、14件のテスト、二重送信の防止策、実際に失敗から修正まで確認したSQLite接続の問題、検証の限界をまとめています。
 
 ## English overview
 
-StudyFlow is a deliberately small learning web app used to demonstrate the complete QA loop:
+StudyFlow is a small learning web app with tests covering progress, scoring, resume behavior, and duplicate-submission prevention. The QA process connects:
 
 **Risk → Acceptance Criteria → Test → Defect → Fix → Regression → CI**
 
-## Why this project exists
-
-The goal is not to prove that I can build a sophisticated education product.
-The goal is to make QA judgment and evidence inspectable.
+## Quality risks
 
 ### Main risks
 - Learning progress loss
@@ -104,14 +99,9 @@ studyflow-qa-portfolio/
 └── .github/workflows/playwright.yml
 ```
 
-## Portfolio positioning
-
-I do **not** present this as commercial QA work.
-It is an independent portfolio project created to show practical QA reasoning, automation, reproducibility, and regression discipline.
-
 ## Current release gate
 
-A repository is portfolio-ready when:
+Release checks:
 - local 14/14 tests pass
 - no secrets are committed
 - GitHub Actions is green after public push
