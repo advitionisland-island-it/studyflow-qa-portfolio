@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StudyFlow QA Lab</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <h1>StudyFlow QA Lab</h1>
+    <p class="muted">A deliberately small learning app used to demonstrate QA engineering.</p>
+
+    <section id="login-panel">
+      <label for="username">Username</label>
+      <input id="username" autocomplete="off" placeholder="e.g. qa-candidate">
+      <button id="login-btn">Login</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </section>
+
+    <section id="app-panel" hidden>
+      <div class="card">
+        <strong id="welcome"></strong>
+        <div id="progress">Answered: 0 / 2</div>
+        <div id="score">Score: 0</div>
+      </div>
+
+      <div id="quiz" class="card">
+        <h2 id="question-title">Question</h2>
+        <p id="question-prompt"></p>
+        <div id="options"></div>
+        <button id="submit-btn">Submit answer</button>
+        <p id="quiz-message" role="status"></p>
+      </div>
+
+      <div id="complete" class="card" hidden>
+        <h2>Completed</h2>
+        <p id="final-score"></p>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

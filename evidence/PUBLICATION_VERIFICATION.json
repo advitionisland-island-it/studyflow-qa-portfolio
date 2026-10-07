@@ -1,0 +1,52 @@
+{
+  "checked_at_utc": "2026-10-07T02:00:12.616776+00:00",
+  "scope": "Fresh local publication checks; remote CI is verified separately against its run SHA.",
+  "archive_sha256": "72d483687189c1fc26151535964e9fbf911e501fe2fa020335d996bfb7483655",
+  "python": "3.14.3",
+  "pytest": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "python_app_coverage_percent": 93.04,
+  "dependency_audit": {
+    "known_vulnerabilities": 0,
+    "tool": "pip-audit 2.10.1",
+    "scope": "requirements.txt resolved dependencies"
+  },
+  "secret_pattern_scan": {
+    "hits": 0,
+    "files_scanned": 23,
+    "rules": [
+      "private-key",
+      "github-token",
+      "aws-access-key",
+      "service-key",
+      "assigned-secret"
+    ],
+    "limitation": "Known token/private-key/assignment patterns; not a guarantee against every possible secret."
+  },
+  "sqlite_connection_regression": {
+    "before_fix": "Existing test_08 closure assertion failed: DID NOT RAISE sqlite3.ProgrammingError.",
+    "after_fix": "All 14 tests passed with explicit connection closure."
+  },
+  "ci_workflow_url": "https://github.com/advitionisland-island-it/studyflow-qa-portfolio/actions/workflows/playwright.yml",
+  "source_sha256": {
+    ".github/workflows/playwright.yml": "cb1c92bf88d3999277e016997ae17ca5d878fa05976f7d92d8e78686b4fc5e5a",
+    "app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/db.py": "10a0f3c682c004676ec95b5708a080ba3883f51e566226e89d2dd918616f122d",
+    "app/main.py": "d332837a15139eb0aed2db0c3a3cd5a1fd81795809b103e411c9347498a9e7fe",
+    "app/static/app.js": "6f6ea012a367676856e8e633e464dd8da0fd39ed434c9f571981778e1332b2b7",
+    "app/static/index.html": "78e6ec4f8e376e4e63e0e2c8f4e6b4ca205e8c90734819bf9cb87687deaaca9f",
+    "app/static/style.css": "b306966fabd0bd9780c97e19b1e14cfe5af6a59a9b9c815533acd6c8e49bbe57",
+    "requirements.txt": "edf6fb0ddea7b23e99522031a105d2015dd3d68453cc8ef0e0405dddf181093e",
+    "tests/api/test_api.py": "ea738881cbd0ac636802c97ffca5c559d485bb45163dc84b845550fc80b48394",
+    "tests/e2e/test_ui.py": "2953d398a1c25bd4dc1a8dcf24f4bdb4b9aee46be72d7beae256459cf5a321e9"
+  },
+  "limitations": [
+    "6 browser tests use a deterministic mock API, not a live backend.",
+    "Username-only demo identity is not authentication.",
+    "The imported reconstructed pre-fix BUG-002 scenario has no original execution log."
+  ]
+}
